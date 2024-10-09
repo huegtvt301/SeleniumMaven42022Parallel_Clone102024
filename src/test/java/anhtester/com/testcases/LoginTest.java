@@ -23,19 +23,16 @@ public class LoginTest extends BaseTest {
         loginPage = new LoginPage();
         commonPage = new CommonPage();
     }
-
-    @Test(priority = 1, dataProvider = "data_provider_login", dataProviderClass = DataProviderManager.class)
-    public void testLoginFromDataProvider(String username, String password) {
-        loginPage.logIn(username, password);
-        commonPage.dangXuat();
-    }
-
-    @Test(priority = 2, dataProvider = "data_provider_login_from_excel_by_row", dataProviderClass = DataProviderManager.class)
+    @Test(priority = 1, dataProvider = "data_provider_login_from_excel_by_row", dataProviderClass = DataProviderManager.class)
     public void testLoginDataProviderFromExcelByRow(Hashtable<String, String> data) {
         loginPage.logIn(data.get("username"), data.get("password"));
         //commonPage.dangXuat();
     }
-
+    @Test(priority =2, dataProvider = "data_provider_login", dataProviderClass = DataProviderManager.class)
+    public void testLoginFromDataProvider(String username, String password) {
+        loginPage.logIn(username, password);
+        commonPage.dangXuat();
+    }
     @Test(priority = 4)
     public void testLoginWithUsernameInValid() {
         loginPage.loginWithUsernameInValid("admin_example_123", "123456");

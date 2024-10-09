@@ -164,6 +164,7 @@ public class WebUI {
         sleep(STEP_TIME);
         String text = getWebElement(by).getText();
         LogUtils.info("Get text: " + text);
+        LogUtils.info("Get text: " + text);
         ExtentTestManager.logMessage(Status.PASS, "Get text: " + text);
         return text; //Trả về một giá trị kiểu String
     }
