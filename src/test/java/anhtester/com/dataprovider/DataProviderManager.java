@@ -26,7 +26,7 @@ public class DataProviderManager {
 
         ExcelHelpers excelHelpers = new ExcelHelpers();
 
-        Object[][] data = excelHelpers.getExcelDataHashTable(SystemHelpers.getCurrentDir() + "datatest/Login.xlsx", "Sheet1", 1, 2);
+        Object[][] data = excelHelpers.getExcelDataHashTable(SystemHelpers.getCurrentDir() + "datatest/Login.xlsx", "Sheet1", 1, 5);
 
         return data;
     }
