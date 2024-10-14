@@ -105,7 +105,7 @@ public class CaptureHelpers extends ScreenRecorder {
 
         try {
 
-            FileHandler.copy(source, new File("./screenshots/" + result.getName() + ".png"));
+            FileHandler.copy(source, new File("./screenshots/" + result.getName() + java.time.LocalDate.now()+".png"));
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -125,7 +125,7 @@ public class CaptureHelpers extends ScreenRecorder {
 
         try {
 
-            FileHandler.copy(source, new File("./screenshots/" + name + ".png"));
+            FileHandler.copy(source, new File("./screenshots/" + name +java.time.LocalDate.now()+ ".png"));
 
         } catch (IOException e) {
             throw new RuntimeException(e);

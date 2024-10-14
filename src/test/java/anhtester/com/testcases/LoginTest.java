@@ -45,4 +45,11 @@ public class LoginTest extends BaseTest {
 
     }
 
+    @Test(priority = 6)
+    public void testLoginWithInValid() {
+        loginPage.logIn("admin_example233444", "123456000");
+
+    }
+
+
 }

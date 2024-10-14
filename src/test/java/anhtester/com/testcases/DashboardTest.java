@@ -27,5 +27,10 @@ public class DashboardTest extends BaseTest {
         dashboardPage = loginPage.logIn("leader01", "123456");
         dashboardPage.openProject();
     }
+    @Test
+    public void testNavigateToProjectValid() {
+        dashboardPage = loginPage.logIn("admin_example", "123456");
+        dashboardPage.openProject();
+    }
 
 }
